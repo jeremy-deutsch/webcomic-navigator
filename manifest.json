@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Webcomic Keyboard Navigator",
+  "version": "1.0",
+
+  "description": "Adds a red border to all webpages matching mozilla.org.",
+
+  "icons": {
+    "48": "icons/baseline_switch_left_black_48dp.png",
+    "96": "icons/baseline_switch_left_black_96dp.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["webcomic-navigator.js"]
+    }
+  ]
+}
