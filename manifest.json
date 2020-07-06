@@ -2,17 +2,18 @@
   "manifest_version": 2,
   "name": "Webcomic Keyboard Navigator",
   "version": "1.0",
-
-  "description": "Adds a red border to all webpages matching mozilla.org.",
-
+  "description": "Lets you navigate through webcomics using your arrow keys.",
   "icons": {
     "48": "icons/baseline_switch_left_black_48dp.png",
     "96": "icons/baseline_switch_left_black_96dp.png"
   },
-
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["<all_urls>", "tabs", "cookies", "menus"],
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*"],
+      "matches": ["<all_urls>"],
       "js": ["webcomic-navigator.js"]
     }
   ]
